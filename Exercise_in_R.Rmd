@@ -1,0 +1,196 @@
+---
+title: "Exercise in R"
+author: "Adi Sarid"
+date: "1/23/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+In the following exercise, we will use a telemarketing dataset of a bank.
+This dataset was obtained from [Kaggle](https://www.kaggle.com/henriqueyamahata/bank-marketing), specifically:
+
+[Moro et al., 2014] S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, In press, http://dx.doi.org/10.1016/j.dss.2014.03.001
+
+Available at: [pdf] http://dx.doi.org/10.1016/j.dss.2014.03.001
+              [bib] http://www3.dsi.uminho.pt/pcortez/bib/2014-dss.txt
+
+## Reading the file
+
+Usually csv files are read with the `read_csv()` command. That is:
+
+```
+bank <- read_csv("bank-additional-full.csv")
+```
+
+However, this command won't work with the file we are trying to read. Instead, we are using `read_delim()`. Why is that?
+
+*** 
+
+Your answer goes here:
+
+
+***
+
+```{r read the file}
+bank <- read_delim("bank-additional-full.csv", delim = ";")
+```
+
+## Get to know the file
+
+Now we want you to get to know the file. Use the following set of commands to describe the file: `glimpse`, `View`, `head`, `typeof`. In your own words, please describe the variables (very generally). Write down the type of each variable, what you think it describes (if you can guess).
+
+Hint: some of the information you are looking for is also available at the location of the file in kaggle. You can use it, but make sure you describe what you understand from it.
+
+```{r get to know the file}
+# For example you can glimpse using
+glimpse(bank)
+
+```
+
+***
+
+You answer:
+
+Demographic variables are:
+
+   1.
+   2.
+   3. ...
+
+Additional variables are:
+
+   1.
+   2. 
+   3. ...
+
+***
+
+## Perform some variable conversions
+
+Some of the variables should be converted from one type to another type. For example, the `y` variable of the file is the dependent variable. It is described by the file authors: "Has the client subscribed a term deposit? (binary: "yes", "no").
+
+What would you have to do to that variable in order to use it as a dependent variable in a regression model?
+
+***
+
+You answer:
+
+
+
+***
+
+Now, use the `mutate` command and the `ifelse` command to perform the conversion that you think is proper. Here is a code sample to help you. Mostly you need to understand how to use `ifelse`, if you are unfamiliar with this command, read about it in the help (type ?ifelse in console and click enter).
+
+```
+
+bank <- bank %>% 
+   mutate(y = ifelse(y == ???, ???, ???))
+
+```
+
+Please enter your complete code here:
+
+```{r convert y}
+# Complete the code for y's conversion here:
+
+
+```
+
+Use the function `mutate` combined with `recode_factor` to turn the `month` variable from specific months into yearly quartiles (Jan-Mar -> Q1, Apr-Jun -> Q2, etc.). Save the result in a new variable `annual_quartile`. You can use this code as an example
+
+```
+
+bank <- bank %>% 
+   mutate(annual_quartile = recode_factor(month,
+                               jan = "Q1",
+                               feb = ???,
+                               ???))
+
+```
+
+```{r convert month}
+# Complete the code for month's conversion here
+
+
+```
+
+## Perform some visualisations
+
+Using either the code from the last exercise (on the new variable `annual_quartile`), or on the original `month`, visualize the number of responses per month. You can use base R to generate the graph, or preferably, use `ggplot2`, here is a partial example.
+
+```
+
+ggplot(bank, aes(x = ???)) + 
+   geom_bar()
+
+```
+
+```{r visualize1}
+# Complete the code here:
+
+
+```
+
+***
+
+Answer here: what does this tell you? is the sample representative? How can this influnce the results?
+
+***
+
+## Examining the relationship between variables
+
+We now want to examine the relationship between different variables. In this case marital status and housing (owning a house). What methods can we use to examine this relationship? please specify three different methods:
+
+***
+
+Your answer:
+
+   1. 
+   2. 
+   3. 
+
+***
+
+Look at the following four graphs. Which one would you use to understand if marital status influences housing? Why?
+
+```{r marital status and housing}
+
+ggplot(bank, aes(fill = marital, x = housing)) + geom_bar(position = "fill") + ggtitle("Chart1")
+ggplot(bank, aes(fill = housing, x = marital)) + geom_bar(position = "fill") + ggtitle("Chart2")
+ggplot(bank, aes(fill = housing, x = marital)) + geom_bar() + ggtitle("Chart3")
+ggplot(bank, aes(fill = marital, x = housing)) + geom_bar() + ggtitle("Chart4")
+
+```
+
+***
+
+Your answer:
+
+***
+
+There is a hypothesis that as the education level increases, so do the chances of someone ownning a home. Based on what you have done in the previous sections you will now:
+
+   1. Recode `education` into three levels (elementary; highschool; professional; university).
+   2. Generate a similar plot to the one you thought is best (in the previous question, just replace marital status with education).
+   3. By examining the plot, what do you think is the answer to the hypothesis that as the education level increases, so do the chances of someone ownning a home?
+   4. How else would you test such a hypothesis (in statistical means, with a calculation of p-value)?
+
+
+```{r education and housing}
+# Provide your answer code here:
+## Build code which recodes education levels into a new variable edu_3_levels
+
+## Generate a plot of the new variable edu_3_levels and housing to examin the hypothesis
+
+
+```
+
+***
+
+Provide you textual answer here:
+
+***
