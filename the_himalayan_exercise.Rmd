@@ -1,0 +1,58 @@
+---
+title: "The Himalayan Exercise"
+author: "Sarid Research Institute"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# General guidelines
+
+For the following exercise you will the Himalayan Database available here: [https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md) with three files:
+
+   * [Peaks, https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv)
+   
+   * [Expeditions, https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/expeditions.csv](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/expeditions.csv)
+   
+   * [Members, https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv)
+
+You have four days to complete the tasks, but if need more than that, let us know.
+
+There are multiple ways to answer each each exercise. Mostly we are interested in seeing how you analyze and solve problems, and implement specific tools and way of thought in your answers. To focus, we are interested in seeing your:
+
+   * Ability to translate a broad or vague idea into a research question, and then break it down to even more specific hypothesis, and extend it to models and visualizations.
+   
+   * Ability to employ data transformations, visualizations, and modeling in your analysis, in order to convey concepts and ideas. Choosing the right type of visualization and model to make your point.
+   
+   * Your capability to document your work and explain it to the reader.
+   
+   * Your coding skills in `R`.
+
+Please submit your work in an Rmd format, and a knitted html. Please feel free to ask any questions you might have via email: adi@sarid-ins.co.il.
+
+# Exercise 1
+
+What is the best season to climb Himalayan peaks?
+
+# Exercise 2
+
+What are the most dangerous peaks? 
+
+Build a model to rate the danger of a Himalayan peak
+
+# Exercise 3
+
+What are the most successful expeditions?
+
+Build a model to predict the success of an expedition.
+
+# Exercise 4
+
+If you were to climb the Himalayans, what trekking agency would you choose?
+
+# Exercise 5
+
+What country has the best climbers? how does that change over time?
