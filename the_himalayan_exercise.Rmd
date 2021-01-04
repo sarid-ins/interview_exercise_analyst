@@ -19,9 +19,9 @@ For the following exercise you will the Himalayan Database available here: [http
    
    * [Members, https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv)
 
-You have four days to complete the tasks, but if need more than that, let us know.
+Please submit the work by Friday 8th.
 
-There are multiple ways to answer each each exercise. Mostly we are interested in seeing how you analyze and solve problems, and implement specific tools and way of thought in your answers. To focus, we are interested in seeing your:
+There are multiple ways to answer each each exercise. The first exercise is more detailed than the other ones. Mostly we are interested in seeing how you analyze and solve problems, and implement specific tools and way of thought in your answers. To focus, we are interested in seeing your:
 
    * Ability to translate a broad or vague idea into a research question, and then break it down to even more specific hypothesis, and extend it to models and visualizations.
    
@@ -31,11 +31,35 @@ There are multiple ways to answer each each exercise. Mostly we are interested i
    
    * Your coding skills in `R`.
 
+**Important: you don't have to solve all the exercises. Solve the first exercise and then another one that you choose from exercises 2-5.**
+
 Please submit your work in an Rmd format, and a knitted html. Please feel free to ask any questions you might have via email: adi@sarid-ins.co.il.
 
 # Exercise 1
 
-What is the best season to climb Himalayan peaks?
+This first exercise is much more detailed, and broken to steps. In this exercise you will answer the question: "what is the best season to climb Himalayan peaks?"
+
+Part 1: Read the **expeditions** file using `read_csv` and review its contents with `glimpse`. Shortly explain about the variables in the file which you think are relevant to this exercise.
+
+   * `season`: the season of the expedition.
+   
+   * next variable...
+   
+   * next variable...
+
+Part 2: Think of two ways to define the "best season to climb" (how would you define it?)
+
+   * Method 1: define "best" by the number of expeditions in each season. If most expeditions went out in a specific season, this means that it is the best season (sort of "wisdom of the crowd")
+   
+   * Method 2: (provide your own)
+   
+   * Method 3: (provide your own)
+   
+Part 3: Using `ggplot2`, plot the season distribution. Which two seasons are the most common? can you think of an explanation as to why this is the case?
+
+Part 4: Extract the 5 most common peaks to climb (you can use `count` to count the peak name). What are they?
+
+Part 5: Using `ggplot2` plot the distribution of season against these 5 peaks. What is the difference between the *Everest* peak and the *Ama Dablam* peak? Can you spot a difference in the distribution? Can you think of a statistical test to examine the hypothesis that the preferred season is peak-dependent?
 
 # Exercise 2
 
