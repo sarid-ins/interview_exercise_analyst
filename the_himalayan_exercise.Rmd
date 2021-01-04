@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # General guidelines
 
-For the following exercise you will the Himalayan Database available here: [https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md) with three files:
+For the following exercise you will use the Himalayan Database available here: [https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md) with three files:
 
    * [Peaks, https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv)
    
@@ -19,7 +19,7 @@ For the following exercise you will the Himalayan Database available here: [http
    
    * [Members, https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv)
 
-Please submit the work by Friday 8th.
+You have a week for this work, if you feel like it's not enough let us know.
 
 There are multiple ways to answer each each exercise. The first exercise is more detailed than the other ones. Mostly we are interested in seeing how you analyze and solve problems, and implement specific tools and way of thought in your answers. To focus, we are interested in seeing your:
 
@@ -65,7 +65,7 @@ Part 5: Using `ggplot2` plot the distribution of season against these 5 peaks. W
 
 What are the most dangerous peaks? 
 
-Build a model to rate the danger of a Himalayan peak
+Build a model to predict the danger of a Himalayan peak
 
 # Exercise 3
 
